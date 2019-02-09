@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+}
+#estruturaGrid{
+    display: grid;
+    grid-template-areas: 'header header header header'
+                         'nav nav nav nav'
+                         'section section aside aside'
+                         'footer footer footer footer';
+    grid-template-rows: 200px 50px 500px 100px; /* cada medida corresponde a uma linha */
+    grid-template-columns: 25vw 25vw 25vw 25vw; /* cada medida corresponde a uma coluna, a unidade 25vw permite que as colunas ocupem 25% da área total do site */
+}
+header{
+    grid-area: header;
+    background-color: white;
+    display: flex; /* posiciona conforme o eixo X, todos os elementos dentro do pai ficam um do lado do outro */
+    align-items: center; /*  */
+    justify-content: center; /* posiciona conforme o eixo Y */
+    flex-direction: column; /* corrige a direção dos elementos no display flex, de linha vai para coluna */
+}
+header img{
+    width: 20%;
+    align-self: flex-start; /* alinha o elemento em específico, aos invés de todos os elementos dentro do pai */
+}
+nav{
+    grid-area: nav;
+    background-color: lime;
+}
+section{
+    grid-area: section;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+section img{
+    width: 200px;
+    height: auto;
+}
+aside{
+    grid-area: aside;
+    background-color: darksalmon; 
+}
+footer{
+    grid-area: footer;
+    background-color: gray; 
+}
